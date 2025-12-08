@@ -1,0 +1,6 @@
+com\pdau\cr\model\ReporteDenuncia.class
+com\pdau\cr\event\DenunciaCreadaEvent.class
+com\pdau\cr\listener\DenunciaEventsListener.class
+com\pdau\cr\ComplaintReportApplication.class
+com\pdau\cr\repository\ReporteDenunciaRepository.class
+com\pdau\cr\config\RabbitConfig.class
