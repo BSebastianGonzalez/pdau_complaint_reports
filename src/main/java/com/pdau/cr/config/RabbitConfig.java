@@ -17,6 +17,10 @@ public class RabbitConfig {
     public static final String DENUNCIA_ROUTING_KEY = "denuncia.creada";
     public static final String DENUNCIA_QUEUE = "reporte.denuncia.queue";
 
+    public static final String ESTADO_QUEUE = "reporte.denuncia.estado.queue";
+    public static final String ESTADO_EXCHANGE = "denuncia.estado.exchange";
+    public static final String ESTADO_ROUTING_KEY = "denuncia.estado.actualizado";
+
     @Bean
     public Queue denunciaQueue() {
         return new Queue(DENUNCIA_QUEUE, true);
@@ -32,6 +36,23 @@ public class RabbitConfig {
         return BindingBuilder.bind(denunciaQueue())
                 .to(denunciaExchange())
                 .with(DENUNCIA_ROUTING_KEY);
+    }
+
+    @Bean
+    public Queue estadoQueue() {
+        return new Queue(ESTADO_QUEUE, true);
+    }
+
+    @Bean
+    public TopicExchange estadoExchange() {
+        return new TopicExchange(ESTADO_EXCHANGE);
+    }
+
+    @Bean
+    public Binding estadoBinding() {
+        return BindingBuilder.bind(estadoQueue())
+                .to(estadoExchange())
+                .with(ESTADO_ROUTING_KEY);
     }
 
     @Bean

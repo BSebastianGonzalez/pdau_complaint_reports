@@ -2,6 +2,7 @@ package com.pdau.cr.listener;
 
 import com.pdau.cr.config.RabbitConfig;
 import com.pdau.cr.event.DenunciaCreadaEvent;
+import com.pdau.cr.event.DenunciaEstadoActualizadoEvent;
 import com.pdau.cr.model.ReporteDenuncia;
 import com.pdau.cr.repository.ReporteDenunciaRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,5 +27,15 @@ public class DenunciaEventsListener {
         r.setCategorias(String.join(", ", event.getCategorias()));
 
         repository.save(r);
+    }
+
+    @RabbitListener(queues = RabbitConfig.ESTADO_QUEUE)
+    public void onEstadoActualizado(DenunciaEstadoActualizadoEvent event) {
+
+        repository.findById(event.getDenunciaId())
+                .ifPresent(r -> {
+                    r.setEstado(event.getNuevoEstado());
+                    repository.save(r);
+                });
     }
 }

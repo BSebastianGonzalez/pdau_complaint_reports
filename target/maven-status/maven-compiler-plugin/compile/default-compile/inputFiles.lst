@@ -1,6 +1,7 @@
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\cr\src\main\java\com\pdau\cr\ComplaintReportApplication.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\cr\src\main\java\com\pdau\cr\config\RabbitConfig.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\cr\src\main\java\com\pdau\cr\event\DenunciaCreadaEvent.java
+C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\cr\src\main\java\com\pdau\cr\event\DenunciaEstadoActualizadoEvent.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\cr\src\main\java\com\pdau\cr\listener\DenunciaEventsListener.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\cr\src\main\java\com\pdau\cr\model\ReporteDenuncia.java
 C:\Users\SEBASTIAN\OneDrive\Escritorio\Universidad\8. Octavo semestre\MIcroservicios\Proyecto\cr\src\main\java\com\pdau\cr\repository\ReporteDenunciaRepository.java
