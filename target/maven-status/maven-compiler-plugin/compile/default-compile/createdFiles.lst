@@ -5,3 +5,5 @@ com\pdau\cr\ComplaintReportApplication.class
 com\pdau\cr\event\DenunciaEstadoActualizadoEvent.class
 com\pdau\cr\repository\ReporteDenunciaRepository.class
 com\pdau\cr\config\RabbitConfig.class
+com\pdau\cr\service\ReporteDenunciaService.class
+com\pdau\cr\controller\ReporteDenunciaController.class
